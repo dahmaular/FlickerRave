@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../theme/colors";
 import { HomeScreen } from "../../features/home/screen/home.screen";
 import { SettingsNavigator } from "./settings.navigator";
+import { MapScreen } from "../../features/map/mapscreen";
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -14,6 +15,7 @@ const Tab = createBottomTabNavigator();
 const TabIcon = {
   Home: "md-home",
   Settings: "md-settings",
+  Map: "md-map"
 };
 
 const createScreenOptions = ({ route }) => {
@@ -35,5 +37,6 @@ export const AppNavigator = () => (
   >
     <Tab.Screen name="Home" component={HomeScreen} />
     <Tab.Screen name="Settings" component={SettingsNavigator} />
+    <Tab.Screen name="MapScreen" component={MapScreen} />
   </Tab.Navigator>
 );

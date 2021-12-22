@@ -34,7 +34,7 @@ const HomeItemContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
 
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
   const img1 = require("../../../../assets/package.png");
   const img2 = require("../../../../assets/map.png");
   const img3 = require("../../../../assets/delivery_man.jpg");
@@ -65,7 +65,7 @@ export const HomeScreen = () => {
             <HomeCard.Cover source={img2} />
             <HomeCard.Content>
               <Title>
-                <Text variant="hint">
+                <Text variant="hint" onPress={() => {navigation.navigate('MapScreen')}}>
                   Track dispatch rider
                 </Text>
               </Title>
